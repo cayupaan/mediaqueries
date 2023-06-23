@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    
+}
+
+body{
+    overflow-y: scroll;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 10fr 1fr;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer";
+}
+
+nav{
+    grid-area: nav;
+    background-color: #01579b;
+}
+
+aside{
+    grid-area: aside;
+    background-color: gainsboro;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #01579b;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card button{
+    background: #01579b;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+
+@media screen and (min-width: 992px){
+    body{
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas: 
+        "nav aside"
+        "nav main"
+        "footer main";
+    }
+    .firstcontainer{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .secondcontainer{
+        display: flex;
+        flex-direction: row;
+    }
+}
